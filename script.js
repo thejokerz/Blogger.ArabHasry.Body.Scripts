@@ -2,14 +2,14 @@ let darkMode = localStorage.getItem('darkMode');
 
 const darkModeToggle = document.querySelector('#chk');
 
-const enableDarkMode = () =&gt; {
+const enableDarkMode = () => {
 
   document.body.classList.add('darkmode');
 
   localStorage.setItem('darkMode', 'enabled');
 }
 
-const disableDarkMode = () =&gt; {
+const disableDarkMode = () => {
 
   document.body.classList.remove('darkmode');
 
@@ -22,7 +22,7 @@ if (darkMode === 'enabled') {
 }
 
 
-darkModeToggle.addEventListener('click', () =&gt; {
+darkModeToggle.addEventListener('click', () => {
   // get their darkMode setting
   darkMode = localStorage.getItem('darkMode'); 
   

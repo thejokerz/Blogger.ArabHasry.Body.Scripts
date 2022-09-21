@@ -132,7 +132,7 @@ $(_0x33fe('0x34'))['length'] ? ($(_0x33fe('0x18'))[_0x33fe('0x13')](), $(_0x33fe
 
 
 // Cookie Message
-window.cookieconsent?.initialise?({
+window.cookieconsent.initialise({
   "palette": {
     "popup": {
       "background": "#000"
@@ -145,7 +145,7 @@ window.cookieconsent?.initialise?({
   "position": "bottom-left",
   "content": {
     "message": "يستخدم موقعنا ملفات تعريف الإرتباط لضمان حصولك على أفضل تجربة فى موقعنا ",
-    "dismiss": "حسنا&#1611;",
+    "dismiss": "حسنا",
     "link": "إقرأ المزيد",
     "href": "https://arab-hasry.blogspot.com/p/privacy-policy.html"
   }

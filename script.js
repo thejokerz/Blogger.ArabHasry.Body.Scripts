@@ -101,3 +101,38 @@ $(_0x33fe('0x34'))['length'] ? ($(_0x33fe('0x18'))[_0x33fe('0x13')](), $(_0x33fe
     $(".tutorial-demo style").detach().appendTo("head");
   });
 // Scroll To Top
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Cookie Message
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "classic",
+  "position": "bottom-left",
+  "content": {
+    "message": "يستخدم موقعنا ملفات تعريف الإرتباط لضمان حصولك على أفضل تجربة فى موقعنا ",
+    "dismiss": "حسنا&#1611;",
+    "link": "إقرأ المزيد",
+    "href": "https://arab-hasry.blogspot.com/p/privacy-policy.html"
+  }
+});
+// Cookie Message

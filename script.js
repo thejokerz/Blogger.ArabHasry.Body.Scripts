@@ -129,7 +129,7 @@ window.cookieconsent.initialise({
   "position": "bottom-left",
   "content": {
     "message": "يستخدم موقعنا ملفات تعريف الإرتباط لضمان حصولك على أفضل تجربة فى موقعنا ",
-    "dismiss": "حسنا&#1611;",
+    "dismiss": "موافق;",
     "link": "إقرأ المزيد",
     "href": "https://arab-hasry.blogspot.com/p/privacy-policy.html"
   }

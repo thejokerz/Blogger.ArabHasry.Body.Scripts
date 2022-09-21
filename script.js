@@ -84,20 +84,20 @@ $(_0x33fe('0x34'))['length'] ? ($(_0x33fe('0x18'))[_0x33fe('0x13')](), $(_0x33fe
 
 
 // Scroll To Top
-  var scrollToTop = $(&quot;.scroll-to-top&quot;);
-  $(window).on(&quot;scroll&quot;, function () {
+  var scrollToTop = $(".scroll-to-top");
+  $(window).on("scroll", function () {
     if ($(window).scrollTop() &gt;= 500) {
-      if (!scrollToTop.is(&quot;:visible&quot;)) {
+      if (!scrollToTop.is(":visible")) {
         scrollToTop.fadeIn(300);
       }
     } else {
-      if (scrollToTop.is(&quot;:visible&quot;)) {
+      if (scrollToTop.is(":visible")) {
         scrollToTop.fadeOut(300);
       }
     }
   });
-  $(&quot;.scroll-to-top span&quot;).on(&quot;click&quot;, function () {
-    $(&quot;html, body&quot;).animate(
+  $(".scroll-to-top span").on("click", function () {
+    $("html, body").animate(
       {
         scrollTop: 0,
       },
@@ -105,9 +105,9 @@ $(_0x33fe('0x34'))['length'] ? ($(_0x33fe('0x18'))[_0x33fe('0x13')](), $(_0x33fe
     );
   });
 
-  $(window).on(&quot;load&quot;, function () {
-    &quot;use strict&quot;;
-    $(&quot;.tutorial-demo style&quot;).detach().appendTo(&quot;head&quot;);
+  $(window).on("load", function () {
+    "use strict";
+    $(".tutorial-demo style").detach().appendTo("head");
   });
 // Scroll To Top
 

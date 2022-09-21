@@ -1,5 +1,10 @@
 <!-- Start Body Scripts -->
   
+
+<script>
+
+<!-- Start Body Scripts -->
+  
 <!-- View More Posts -->
 <!-- Button Open Side Menu -->
 <!-- Area Press To Hide For Side Menu And Search -->
@@ -1253,3 +1258,5 @@ function submenuClose() {
 <!-- Code Highlight Box With Copy Code To Clipboard Button -->
 <script src='https://raw.githack.com/thejokerz/Prism-Code-Copy-To-Clipboard-Highlight-Syntax-JavaScript/main/script.js'/>
 <!-- Code Highlight Box With Copy Code To Clipboard Button -->
+  
+</script>

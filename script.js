@@ -126,7 +126,7 @@ window.cookieconsent.initialise({
     }
   },
   "theme": "classic",
-  "position": "center",
+  "position": "bottom-left",
   "content": {
     "message": "يستخدم موقعنا ملفات تعريف الإرتباط لضمان حصولك على أفضل تجربة فى موقعنا ",
     "dismiss": "موافق",

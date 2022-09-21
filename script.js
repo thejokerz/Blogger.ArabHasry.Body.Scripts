@@ -132,6 +132,7 @@ $(_0x33fe('0x34'))['length'] ? ($(_0x33fe('0x18'))[_0x33fe('0x13')](), $(_0x33fe
 
 
 // Cookie Message
+&lt;script data-cfasync='false' src='https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js'/&gt;
 window.cookieconsent.initialise({
   "palette": {
     "popup": {

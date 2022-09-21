@@ -1,3 +1,4 @@
+<script>
 /*<![CDATA[*/
 let darkMode = localStorage.getItem('darkMode'); 
 
@@ -36,3 +37,4 @@ darkModeToggle.addEventListener('click', () => {
   }
 });
 /*]]>*/
+</script>

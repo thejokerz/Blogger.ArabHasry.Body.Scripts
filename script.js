@@ -1,5 +1,5 @@
 // Dark Mode
-
+<script>
 // check for saved &#39;darkMode&#39; in localStorage
 let darkMode = localStorage.getItem(&#39;darkMode&#39;); 
 
@@ -38,5 +38,5 @@ darkModeToggle.addEventListener(&#39;click&#39;, () =&gt; {
     disableDarkMode(); 
   }
 });
-
+</script>
 // Dark Mode

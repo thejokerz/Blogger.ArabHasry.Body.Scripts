@@ -1285,52 +1285,52 @@ $(function () {
 
 // Dropdown Inside Top Main Menu
 // Get all the dropdown from document
-document.querySelectorAll(&#39;.dropdown-toggle&#39;).forEach(dropDownFunc);
-document.querySelectorAll(&#39;.submenu&#39;).forEach(submenuFunc);
+document.querySelectorAll('.dropdown-toggle').forEach(dropDownFunc);
+document.querySelectorAll('.submenu').forEach(submenuFunc);
 
 // Dropdown Open and Close function
 function dropDownFunc(dropDown) {
-    if (dropDown.classList.contains(&#39;click-dropdown&#39;) === true) {
-        dropDown.addEventListener(&#39;click&#39;, function (e) {
+    if (dropDown.classList.contains('click-dropdown') === true) {
+        dropDown.addEventListener('click', function (e) {
             e.preventDefault();
 
-            if (this.nextElementSibling.classList.contains(&#39;dropdown-active&#39;) === true) {
+            if (this.nextElementSibling.classList.contains('dropdown-active') === true) {
                 // Close the clicked dropdown
-                this.parentElement.classList.remove(&#39;dropdown-open&#39;);
-                this.nextElementSibling.classList.remove(&#39;dropdown-active&#39;);
+                this.parentElement.classList.remove('dropdown-open');
+                this.nextElementSibling.classList.remove('dropdown-active');
 
             } else {
                 // Close the opend dropdown
                 closeDropdown();
 
                 // add the open and active class(Opening the DropDown)
-                this.parentElement.classList.add(&#39;dropdown-open&#39;);
-                this.nextElementSibling.classList.add(&#39;dropdown-active&#39;);
+                this.parentElement.classList.add('dropdown-open');
+                this.nextElementSibling.classList.add('dropdown-active');
             }
         });
     }
 
-    if (dropDown.classList.contains(&#39;hover-dropdown&#39;) === true) {
+    if (dropDown.classList.contains('hover-dropdown') === true) {
 
         dropDown.onmouseover = dropDown.onmouseout = dropdownHover;
 
         function dropdownHover(e) {
-            if (e.type == &#39;mouseover&#39;) {
+            if (e.type == 'mouseover') {
                 // Close the opend dropdown
                 closeDropdown();
 
                 // add the open and active class(Opening the DropDown)
-                this.parentElement.classList.add(&#39;dropdown-open&#39;);
-                this.nextElementSibling.classList.add(&#39;dropdown-active&#39;);
+                this.parentElement.classList.add('dropdown-open');
+                this.nextElementSibling.classList.add('dropdown-active');
             }
         }
     }
 };
 
 // Listen to the doc click
-window.addEventListener(&#39;click&#39;, function (e) {
+window.addEventListener('click', function (e) {
     // Close the menu if click happen outside menu
-    if (e.target.closest(&#39;.dropdown-container&#39;) === null) {
+    if (e.target.closest('.dropdown-container') === null) {
         // Close the opend dropdown
         closeDropdown();
     }
@@ -1339,21 +1339,21 @@ window.addEventListener(&#39;click&#39;, function (e) {
 // Close the openend Dropdowns
 function closeDropdown() {
     // remove the open and active class from other opened Dropdown (Closing the opend DropDown)
-    document.querySelectorAll(&#39;.dropdown-container&#39;).forEach(function (container) {
-        container.classList.remove(&#39;dropdown-open&#39;);
+    document.querySelectorAll('.dropdown-container').forEach(function (container) {
+        container.classList.remove('dropdown-open');
     });
 
-    document.querySelectorAll(&#39;.dropdown-menu&#39;).forEach(function (menu) {
-        menu.classList.remove(&#39;dropdown-active&#39;);
+    document.querySelectorAll('.dropdown-menu').forEach(function (menu) {
+        menu.classList.remove('dropdown-active');
     });
 }
 
 // close the dropdown on mouse out from the dropdown list
-document.querySelectorAll(&#39;.dropdown-menu&#39;).forEach(function (dropDownList) {
+document.querySelectorAll('.dropdown-menu').forEach(function (dropDownList) {
     // close the dropdown after user leave the list
     dropDownList.onmouseleave = function () { 
         // onmouseleave check if submenu is open or not
-        dropDownList.querySelectorAll(&#39;li.submenu&#39;).forEach(function (li) {
+        dropDownList.querySelectorAll('li.submenu').forEach(function (li) {
             if(li.classList.contains(submenu-open) == false){
                 closeDropdown();
             }
@@ -1373,16 +1373,16 @@ function submenuFunc(submenuHover) {
 // submenu 
 function submenu(e) {
     // if mouse hover
-    if (e.type == &#39;mouseover&#39;) {
-        if (this.classList.contains(&#39;submenu&#39;) == true) {
+    if (e.type == 'mouseover') {
+        if (this.classList.contains('submenu') == true) {
             // closing other open submenu classes
             submenuClose();
             // adding class to submenu li
-            this.classList.add(&#39;submenu-open&#39;);
+            this.classList.add('submenu-open');
         }
     }
     // if mouse leave
-    if (e.type == &#39;mouseout&#39;) {
+    if (e.type == 'mouseout') {
         // closing the submenu
         submenuClose();
     }
@@ -1391,8 +1391,8 @@ function submenu(e) {
 // close other submenu
 function submenuClose() {
     // performing close function for all the open submenus
-    document.querySelectorAll(&#39;.submenu&#39;).forEach(function (subMenu) {
-        subMenu.classList.remove(&#39;submenu-open&#39;);
+    document.querySelectorAll('.submenu').forEach(function (subMenu) {
+        subMenu.classList.remove('submenu-open');
     });
 }
 // Dropdown Inside Top Main Menu

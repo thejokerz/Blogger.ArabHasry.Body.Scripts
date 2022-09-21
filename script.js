@@ -1,7 +1,7 @@
-let darkMode = localStorage.getItem('darkMode'); 
-
 <script>
 /*<![CDATA[*/
+let darkMode = localStorage.getItem('darkMode'); 
+
 const darkModeToggle = document.querySelector('#chk');
 
 const enableDarkMode = () => {

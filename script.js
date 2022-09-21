@@ -1,5 +1,4 @@
-
-/*<![CDATA[*/
+<script>
 let darkMode = localStorage.getItem('darkMode'); 
 
 const darkModeToggle = document.querySelector('#chk');
@@ -36,5 +35,4 @@ darkModeToggle.addEventListener('click', () => {
     disableDarkMode(); 
   }
 });
-/*]]>*/
-
+</script>

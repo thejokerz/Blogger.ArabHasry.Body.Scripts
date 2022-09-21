@@ -133,21 +133,21 @@ $(_0x33fe('0x34'))['length'] ? ($(_0x33fe('0x18'))[_0x33fe('0x13')](), $(_0x33fe
 
 // Cookie Message
 window.cookieconsent.initialise({
-  &quot;palette&quot;: {
-    &quot;popup&quot;: {
-      &quot;background&quot;: &quot;#000&quot;
+  "palette": {
+    "popup": {
+      "background": "#000"
     },
-    &quot;button&quot;: {
-      &quot;background&quot;: &quot;#f1d600&quot;
+    "button": {
+      "background": "#f1d600"
     }
   },
-  &quot;theme&quot;: &quot;classic&quot;,
-  &quot;position&quot;: &quot;bottom-left&quot;,
-  &quot;content&quot;: {
-    &quot;message&quot;: &quot;يستخدم موقعنا ملفات تعريف الإرتباط لضمان حصولك على أفضل تجربة فى موقعنا &quot;,
-    &quot;dismiss&quot;: &quot;حسنا&#1611;&quot;,
-    &quot;link&quot;: &quot;إقرأ المزيد&quot;,
-    &quot;href&quot;: &quot;https://arab-hasry.blogspot.com/p/privacy-policy.html&quot;
+  "theme": "classic",
+  "position": "bottom-left",
+  "content": {
+    "message": "يستخدم موقعنا ملفات تعريف الإرتباط لضمان حصولك على أفضل تجربة فى موقعنا ",
+    "dismiss": "حسنا&#1611;",
+    "link": "إقرأ المزيد",
+    "href": "https://arab-hasry.blogspot.com/p/privacy-policy.html"
   }
 });
 // Cookie Message

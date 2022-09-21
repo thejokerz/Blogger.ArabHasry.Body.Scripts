@@ -60,3 +60,44 @@ $(_0x33fe('0x34'))['length'] ? ($(_0x33fe('0x18'))[_0x33fe('0x13')](), $(_0x33fe
     var _0x4c870e = _0x3a0190(_0x33fe('0x49'));
     _0x3a0190(window)[_0x33fe('0x53')](function() { 0x63 <= _0x3a0190(this)[_0x33fe('0x1f')]() ? _0x4c870e[_0x33fe('0x4e')](0xa)[_0x33fe('0x39')](_0x33fe('0x49'))[_0x33fe('0x44')](_0x33fe('0x3a')) : _0x4c870e[_0x33fe('0x39')](_0x33fe('0x49'))['removeClass'](_0x33fe('0x3a')); });
 }), $(_0x33fe('0x46'))[_0x33fe('0x5b')] && ($(_0x33fe('0xb'))[_0x33fe('0x22')]({ 'display': _0x33fe('0x28'), 'visibility': _0x33fe('0x29'), 'width': 'auto', 'height': 'auto', 'opacity': '1', 'transform': _0x33fe('0x1d') }), $(_0x33fe('0x38'))[_0x33fe('0x22')]({ 'display': _0x33fe('0x11'), 'visibility': 'visible', 'width': _0x33fe('0x54'), 'height': _0x33fe('0x54'), 'opacity': '1', 'transform': _0x33fe('0x1d') })), $($(_0x33fe('0x31')))['insertBefore'](_0x33fe('0x1a')));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Scroll To Top
+  var scrollToTop = $(".scroll-to-top");
+  $(window).on("scroll", function () {
+    if ($(window).scrollTop() >= 500) {
+      if (!scrollToTop.is(":visible")) {
+        scrollToTop.fadeIn(300);
+      }
+    } else {
+      if (scrollToTop.is(":visible")) {
+        scrollToTop.fadeOut(300);
+      }
+    }
+  });
+  $(".scroll-to-top span").on("click", function () {
+    $("html, body").animate(
+      {
+        scrollTop: 0,
+      },
+      1000
+    );
+  });
+
+  $(window).on("load", function () {
+    "use strict";
+    $(".tutorial-demo style").detach().appendTo("head");
+  });
+// Scroll To Top

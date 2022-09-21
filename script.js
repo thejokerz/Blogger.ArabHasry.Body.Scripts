@@ -86,7 +86,7 @@ $(_0x33fe('0x34'))['length'] ? ($(_0x33fe('0x18'))[_0x33fe('0x13')](), $(_0x33fe
 // Scroll To Top
   var scrollToTop = $(".scroll-to-top");
   $(window).on("scroll", function () {
-    if ($(window).scrollTop() &gt;= 500) {
+    if ($(window).scrollTop() >= 500) {
       if (!scrollToTop.is(":visible")) {
         scrollToTop.fadeIn(300);
       }

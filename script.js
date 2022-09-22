@@ -455,3 +455,43 @@ $StickySidebar(document).ready(function(){
 
 })();
 // Hide And Show Top Main Menu When The User Scrolling Up Or Down
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Add And Remove Active Class Based On URL
+    jQuery(function($) {
+     var path = window.location.href;
+     $('ul li a').each(function() {
+      if (this.href === path) {
+       $(this).addClass('active');
+      }
+     });
+    });
+// Add And Remove Active Class Based On URL
+
+
+
+
+
+
+
+
+
+
+
+
+
+

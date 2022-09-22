@@ -737,9 +737,10 @@ var b_list=document.getElementById("b-list")!==null?document.getElementById("b-l
         };
 
 jQuery("abbr.timeago")["timeago"]();
-var globals = {
-        sidebar: $("aside")["offset"]()["top"]
-        , main: $("#main")["offset"]()["top"]
+var globals = $('.sidebar, .main');
+    if (globals.length) {
+        var contentNav = aside.offset().top;
+        , main = main.offset().top;
 };
 $(function () {
                 "use strict";

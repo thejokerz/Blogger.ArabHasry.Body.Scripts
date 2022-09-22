@@ -1382,6 +1382,6 @@ jQuery("abbr.timeago")["timeago"]();
                 if ($(".f-cols .widget")["length"] === 0) {
                         $(".f-cols")["addClass"]("no-vp")
                 }
-        })
+        });
 // NewsTicker and SliderShow
 // End News Ticker And Slider Show

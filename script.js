@@ -739,8 +739,8 @@ var b_list=document.getElementById("b-list")!==null?document.getElementById("b-l
 // Abbr Timeago
 jQuery("abbr.timeago")["timeago"]();
 var globals = {
-        sidebar: $("aside")["offset"]()["top - 150"]
-        , main: $("#main")["offset"]()["top - 150"]
+        sidebar: $("aside")["offset"]()["top"]
+        , main: $("#main")["offset"]()["top"]
 };
 $(function () {
                 "use strict";

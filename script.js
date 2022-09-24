@@ -349,6 +349,221 @@ $StickySidebar(document).ready(function(){
 
 
 
+
+
+
+
+
+
+
+// Hide And Show Top Main Menu When The User Scrolling Up Or Down
+(function(){
+
+    var doc = document.documentElement;
+    var w   = window;
+
+    var curScroll;
+    var prevScroll = w.scrollY || doc.scrollTop;
+    var curDirection = 0;
+    var prevDirection = 0;
+
+    var header = document.getElementById('site-header');
+    var toggled;
+    var threshold = 0;
+
+    var checkScroll = function() {
+        curScroll = w.scrollY || doc.scrollTop;
+        if(curScroll > prevScroll) {
+            // scrolled down
+            curDirection = 2;
+        }
+        else {
+            //scrolled up
+            curDirection = 1;
+        }
+
+        if(curDirection !== prevDirection) {
+            toggled = toggleHeader();
+        }
+
+        prevScroll = curScroll;
+        if(toggled) {
+            prevDirection = curDirection;
+        }
+    };
+
+    var toggleHeader = function() { 
+        toggled = true;
+        if(curDirection === 2 && curScroll > threshold) {
+            header.classList.add('hide');
+        }
+        else if (curDirection === 1) {
+            header.classList.remove('hide');
+        }
+        else {
+            toggled = false;
+        }
+        return toggled;
+    };
+
+    window.addEventListener('scroll', checkScroll);
+
+})();
+// Hide And Show Top Main Menu When The User Scrolling Up Or Down
+
+
+
+
+
+
+// Add And Remove Active Class Based On URL
+    jQuery(function($) {
+     var path = window.location.href;
+     $('ul li a').each(function() {
+      if (this.href === path) {
+       $(this).addClass('active');
+      }
+     });
+    });
+// Add And Remove Active Class Based On URL
+
+
+
+
+
+
+// Dropdown Inside Top Main Menu
+// Get all the dropdown from document
+document.querySelectorAll('.dropdown-toggle').forEach(dropDownFunc);
+document.querySelectorAll('.submenu').forEach(submenuFunc);
+
+// Dropdown Open and Close function
+function dropDownFunc(dropDown) {
+    if (dropDown.classList.contains('click-dropdown') === true) {
+        dropDown.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            if (this.nextElementSibling.classList.contains('dropdown-active') === true) {
+                // Close the clicked dropdown
+                this.parentElement.classList.remove('dropdown-open');
+                this.nextElementSibling.classList.remove('dropdown-active');
+
+            } else {
+                // Close the opend dropdown
+                closeDropdown();
+
+                // add the open and active class(Opening the DropDown)
+                this.parentElement.classList.add('dropdown-open');
+                this.nextElementSibling.classList.add('dropdown-active');
+            }
+        });
+    }
+
+    if (dropDown.classList.contains('hover-dropdown') === true) {
+
+        dropDown.onmouseover = dropDown.onmouseout = dropdownHover;
+
+        function dropdownHover(e) {
+            if (e.type == 'mouseover') {
+                // Close the opend dropdown
+                closeDropdown();
+
+                // add the open and active class(Opening the DropDown)
+                this.parentElement.classList.add('dropdown-open');
+                this.nextElementSibling.classList.add('dropdown-active');
+            }
+        }
+    }
+};
+
+// Listen to the doc click
+window.addEventListener('click', function (e) {
+    // Close the menu if click happen outside menu
+    if (e.target.closest('.dropdown-container') === null) {
+        // Close the opend dropdown
+        closeDropdown();
+    }
+});
+
+
+// Close the openend Dropdowns
+function closeDropdown() {
+    // remove the open and active class from other opened Dropdown (Closing the opend DropDown)
+    document.querySelectorAll('.dropdown-container').forEach(function (container) {
+        container.classList.remove('dropdown-open');
+    });
+
+    document.querySelectorAll('.dropdown-menu').forEach(function (menu) {
+        menu.classList.remove('dropdown-active');
+    });
+}
+
+// close the dropdown on mouse out from the dropdown list
+document.querySelectorAll('.dropdown-menu').forEach(function (dropDownList) {
+    // close the dropdown after user leave the list
+    dropDownList.onmouseleave = function () { 
+        // onmouseleave check if submenu is open or not
+        dropDownList.querySelectorAll('li.submenu').forEach(function (li) {
+            if(li.classList.contains(submenu-open) == false){
+                closeDropdown();
+            }
+        });
+    };
+});
+
+
+/*---- Submenu Logic ----*/
+
+// submenu
+function submenuFunc(submenuHover) {
+    // checking submenu mouse hover and mouse leave event
+    submenuHover.onmouseover = submenuHover.onmouseout = submenu;
+};
+
+// submenu 
+function submenu(e) {
+    // if mouse hover
+    if (e.type == 'mouseover') {
+        if (this.classList.contains('submenu') == true) {
+            // closing other open submenu classes
+            submenuClose();
+            // adding class to submenu li
+            this.classList.add('submenu-open');
+        }
+    }
+    // if mouse leave
+    if (e.type == 'mouseout') {
+        // closing the submenu
+        submenuClose();
+    }
+}
+
+// close other submenu
+function submenuClose() {
+    // performing close function for all the open submenus
+    document.querySelectorAll('.submenu').forEach(function (subMenu) {
+        subMenu.classList.remove('submenu-open');
+    });
+}
+// Dropdown Inside Top Main Menu
+
+
+
+
+
+
+// Lazy Loading
+// Lazy Load AdSense
+var lazyadsense=!1;window.addEventListener("scroll",function(){(0!=document.documentElement.scrollTop&&!1===lazyadsense||0!=document.body.scrollTop&&!1===lazyadsense)&&(!function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(e,a)}(),lazyadsense=!0)},!0);
+// Lazy Load AdSense Loading Delay
+function downloadJSAtOnload(){var e=document.createElement("script");e.src="https://cdn.jsdelivr.net/gh/imintweb/Js/adsensegurd.js",document.body.appendChild(e)}window.addEventListener?window.addEventListener("load",downloadJSAtOnload,!1):window.attachEvent?window.attachEvent("onload",downloadJSAtOnload):window.onload=downloadJSAtOnload;
+// Lazy Loading
+
+
+
+
+
+
 // Start News Ticker and Slider Show
 var b_list=document.getElementById("b-list")!==null?document.getElementById("b-list").innerHTML:6;var b_cover=document.getElementById("b-cover")!==null?document.getElementById("b-cover").innerHTML:7;var b_sided=document.getElementById("b-sided")!==null?document.getElementById("b-sided").innerHTML:6;var b_cards=document.getElementById("b-cards")!==null?document.getElementById("b-cards").innerHTML:6;var m_res=document.getElementById("max-results")!==null?document.getElementById("max-results").innerHTML:10;var imags_n=document.getElementById("g-max")!==null?document.getElementById("g-max").innerHTML:9;var int_autoplay=document.getElementById("int-autoplay")!==null?(document.getElementById("int-autoplay").innerHTML=='false'?false:true):true;var rel_autoplay=document.getElementById("rel-autoplay")!==null?(document.getElementById("rel-autoplay").innerHTML=='true'?true:false):false;var alt_Img=document.getElementById("alt-Image")!==null?document.getElementById("alt-Image").innerHTML:'http://4.bp.blogspot.com/-MVB5OaBXstY/VpvWQcpZhZI/AAAAAAAAAqM/2MyUX_xVoc0/s1600-r/alt.png';var SelecT=document.getElementById("select");SelecT!==null&&SelecT.innerText=="false"?document.getElementsByTagName("body")[0].classList.remove("no-select"):"";var Skin=document.getElementById("fb-skin")!==null?document.getElementById("fb-skin").innerHTML:'light';var int_items=document.getElementById("int-items")!==null?document.getElementById("int-items").innerHTML:'3';var Profile=document.getElementById("au-profile")!==null?document.getElementById("au-profile").innerHTML:'true';
 
@@ -358,7 +573,7 @@ $.fn.timeago = function (action) {
         var fn = action ? functions[action] : functions;
 };
 
-jQuery("abbr.timeago")["timeago"]()
+jQuery("abbr.timeago")["timeago"]();
 var globals = {
         sidebar: $("aside")["offset"]()
         , main: $("#main")["offset"]()
@@ -1050,213 +1265,5 @@ $(function () {
                 }
         })
 // End News Ticker and Slider Show
-
-
-
-
-
-
-// Hide And Show Top Main Menu When The User Scrolling Up Or Down
-(function(){
-
-    var doc = document.documentElement;
-    var w   = window;
-
-    var curScroll;
-    var prevScroll = w.scrollY || doc.scrollTop;
-    var curDirection = 0;
-    var prevDirection = 0;
-
-    var header = document.getElementById('site-header');
-    var toggled;
-    var threshold = 0;
-
-    var checkScroll = function() {
-        curScroll = w.scrollY || doc.scrollTop;
-        if(curScroll > prevScroll) {
-            // scrolled down
-            curDirection = 2;
-        }
-        else {
-            //scrolled up
-            curDirection = 1;
-        }
-
-        if(curDirection !== prevDirection) {
-            toggled = toggleHeader();
-        }
-
-        prevScroll = curScroll;
-        if(toggled) {
-            prevDirection = curDirection;
-        }
-    };
-
-    var toggleHeader = function() { 
-        toggled = true;
-        if(curDirection === 2 && curScroll > threshold) {
-            header.classList.add('hide');
-        }
-        else if (curDirection === 1) {
-            header.classList.remove('hide');
-        }
-        else {
-            toggled = false;
-        }
-        return toggled;
-    };
-
-    window.addEventListener('scroll', checkScroll);
-
-})();
-// Hide And Show Top Main Menu When The User Scrolling Up Or Down
-
-
-
-
-
-
-// Add And Remove Active Class Based On URL
-    jQuery(function($) {
-     var path = window.location.href;
-     $('ul li a').each(function() {
-      if (this.href === path) {
-       $(this).addClass('active');
-      }
-     });
-    });
-// Add And Remove Active Class Based On URL
-
-
-
-
-
-
-// Dropdown Inside Top Main Menu
-// Get all the dropdown from document
-document.querySelectorAll('.dropdown-toggle').forEach(dropDownFunc);
-document.querySelectorAll('.submenu').forEach(submenuFunc);
-
-// Dropdown Open and Close function
-function dropDownFunc(dropDown) {
-    if (dropDown.classList.contains('click-dropdown') === true) {
-        dropDown.addEventListener('click', function (e) {
-            e.preventDefault();
-
-            if (this.nextElementSibling.classList.contains('dropdown-active') === true) {
-                // Close the clicked dropdown
-                this.parentElement.classList.remove('dropdown-open');
-                this.nextElementSibling.classList.remove('dropdown-active');
-
-            } else {
-                // Close the opend dropdown
-                closeDropdown();
-
-                // add the open and active class(Opening the DropDown)
-                this.parentElement.classList.add('dropdown-open');
-                this.nextElementSibling.classList.add('dropdown-active');
-            }
-        });
-    }
-
-    if (dropDown.classList.contains('hover-dropdown') === true) {
-
-        dropDown.onmouseover = dropDown.onmouseout = dropdownHover;
-
-        function dropdownHover(e) {
-            if (e.type == 'mouseover') {
-                // Close the opend dropdown
-                closeDropdown();
-
-                // add the open and active class(Opening the DropDown)
-                this.parentElement.classList.add('dropdown-open');
-                this.nextElementSibling.classList.add('dropdown-active');
-            }
-        }
-    }
-};
-
-// Listen to the doc click
-window.addEventListener('click', function (e) {
-    // Close the menu if click happen outside menu
-    if (e.target.closest('.dropdown-container') === null) {
-        // Close the opend dropdown
-        closeDropdown();
-    }
-});
-
-
-// Close the openend Dropdowns
-function closeDropdown() {
-    // remove the open and active class from other opened Dropdown (Closing the opend DropDown)
-    document.querySelectorAll('.dropdown-container').forEach(function (container) {
-        container.classList.remove('dropdown-open');
-    });
-
-    document.querySelectorAll('.dropdown-menu').forEach(function (menu) {
-        menu.classList.remove('dropdown-active');
-    });
-}
-
-// close the dropdown on mouse out from the dropdown list
-document.querySelectorAll('.dropdown-menu').forEach(function (dropDownList) {
-    // close the dropdown after user leave the list
-    dropDownList.onmouseleave = function () { 
-        // onmouseleave check if submenu is open or not
-        dropDownList.querySelectorAll('li.submenu').forEach(function (li) {
-            if(li.classList.contains(submenu-open) == false){
-                closeDropdown();
-            }
-        });
-    };
-});
-
-
-/*---- Submenu Logic ----*/
-
-// submenu
-function submenuFunc(submenuHover) {
-    // checking submenu mouse hover and mouse leave event
-    submenuHover.onmouseover = submenuHover.onmouseout = submenu;
-};
-
-// submenu 
-function submenu(e) {
-    // if mouse hover
-    if (e.type == 'mouseover') {
-        if (this.classList.contains('submenu') == true) {
-            // closing other open submenu classes
-            submenuClose();
-            // adding class to submenu li
-            this.classList.add('submenu-open');
-        }
-    }
-    // if mouse leave
-    if (e.type == 'mouseout') {
-        // closing the submenu
-        submenuClose();
-    }
-}
-
-// close other submenu
-function submenuClose() {
-    // performing close function for all the open submenus
-    document.querySelectorAll('.submenu').forEach(function (subMenu) {
-        subMenu.classList.remove('submenu-open');
-    });
-}
-// Dropdown Inside Top Main Menu
-
-
-
-
-
-
-// Lazy Loading
-// Lazy Load AdSense
-var lazyadsense=!1;window.addEventListener("scroll",function(){(0!=document.documentElement.scrollTop&&!1===lazyadsense||0!=document.body.scrollTop&&!1===lazyadsense)&&(!function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(e,a)}(),lazyadsense=!0)},!0);
-// Lazy Load AdSense Loading Delay
-function downloadJSAtOnload(){var e=document.createElement("script");e.src="https://cdn.jsdelivr.net/gh/imintweb/Js/adsensegurd.js",document.body.appendChild(e)}window.addEventListener?window.addEventListener("load",downloadJSAtOnload,!1):window.attachEvent?window.attachEvent("onload",downloadJSAtOnload):window.onload=downloadJSAtOnload;
-// Lazy Loading
 
 <!-- End Body Scripts -->

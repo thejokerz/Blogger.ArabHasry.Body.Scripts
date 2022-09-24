@@ -1,4 +1,4 @@
-<!-- Start Body Scripts -->
+// Start Body Scripts
 
 // View More Posts
 // Button Open Side Menu
@@ -1258,4 +1258,4 @@ $(function () {
         })
 // End News Ticker and Slider Show
 
-<!-- End Body Scripts -->
+// End Body Scripts

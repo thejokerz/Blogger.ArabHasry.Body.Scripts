@@ -98,32 +98,6 @@ $(_0x33fe('0x34'))['length'] ? ($(_0x33fe('0x18'))[_0x33fe('0x13')](), $(_0x33fe
 
 
 
-// Cookie Message
-window.cookieconsent.initialise({
-  "palette": {
-    "popup": {
-      "background": "#000"
-    },
-    "button": {
-      "background": "#f1d600"
-    }
-  },
-  "theme": "classic",
-  "position": "bottom-left",
-  "content": {
-    "message": "يستخدم موقعنا ملفات تعريف الإرتباط لضمان حصولك على أفضل تجربة فى موقعنا ",
-    "dismiss": "موافق",
-    "link": "إقرأ المزيد",
-    "href": "https://arab-hasry.blogspot.com/p/privacy-policy.html"
-  }
-});
-// Cookie Message
-
-
-
-
-
-
 // Dark Mode
 // check for saved 'darkMode' in localStorage
 let darkMode = localStorage.getItem('darkMode'); 
@@ -349,13 +323,6 @@ $StickySidebar(document).ready(function(){
 
 
 
-
-
-
-
-
-
-
 // Hide And Show Top Main Menu When The User Scrolling Up Or Down
 (function(){
 
@@ -485,7 +452,6 @@ window.addEventListener('click', function (e) {
     }
 });
 
-
 // Close the openend Dropdowns
 function closeDropdown() {
     // remove the open and active class from other opened Dropdown (Closing the opend DropDown)
@@ -510,7 +476,6 @@ document.querySelectorAll('.dropdown-menu').forEach(function (dropDownList) {
         });
     };
 });
-
 
 /*---- Submenu Logic ----*/
 
@@ -558,6 +523,31 @@ var lazyadsense=!1;window.addEventListener("scroll",function(){(0!=document.docu
 // Lazy Load AdSense Loading Delay
 function downloadJSAtOnload(){var e=document.createElement("script");e.src="https://cdn.jsdelivr.net/gh/imintweb/Js/adsensegurd.js",document.body.appendChild(e)}window.addEventListener?window.addEventListener("load",downloadJSAtOnload,!1):window.attachEvent?window.attachEvent("onload",downloadJSAtOnload):window.onload=downloadJSAtOnload;
 // Lazy Loading
+
+
+
+
+
+// Cookie Message
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "classic",
+  "position": "bottom-left",
+  "content": {
+    "message": "يستخدم موقعنا ملفات تعريف الإرتباط لضمان حصولك على أفضل تجربة فى موقعنا ",
+    "dismiss": "موافق",
+    "link": "إقرأ المزيد",
+    "href": "https://arab-hasry.blogspot.com/p/privacy-policy.html"
+  }
+});
+// Cookie Message
 
 
 

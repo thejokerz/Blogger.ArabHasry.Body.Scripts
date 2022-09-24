@@ -1165,7 +1165,8 @@ $(function () {
                 };
                 $(document)["one"]("ajaxStop", function () {
                         if (!$(".intro-ch")["text"]()["match"]("no") && $(".intro-ch")["text"]()["length"] > 0) {
-                                $(".intro")["owlCarousel"]({
+                            var $j = jQuery.noConflict();
+                                $j(".intro")["owlCarousel"]({
                                         autoPlay: int_autoplay
                                         , itemsDesktop: !int_items["match"]("1") ? [5000, int_items] : false
                                         , singleItem: int_items["match"]("1") ? true : false

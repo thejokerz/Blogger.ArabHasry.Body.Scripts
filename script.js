@@ -358,7 +358,7 @@ $.fn.timeago = function (action) {
 var fn = action ? functions[action] : functions;
 };
 
-$("abbr.timeago")["timeago"]();
+jQuery("abbr.timeago")["timeago"]();
 var globals = {
         sidebar: $("aside")["offset"]()
         , main: $("#main")["offset"]()

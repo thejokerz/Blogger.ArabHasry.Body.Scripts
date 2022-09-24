@@ -1190,7 +1190,8 @@ $(function () {
                                 })
                         };
                         if (!$(".ticker-ch")["text"]()["match"]("no") && $(".ticker-ch")["text"]()["length"] > 0) {
-                                $(".marquee")["marquee"]({
+                            var $j = jQuery.noConflict();
+                                $j(".marquee")["marquee"]({
                                         pauseOnHover: true
                                         , duration: 15000
                                         , duplicated: true

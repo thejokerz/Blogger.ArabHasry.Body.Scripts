@@ -1,4 +1,152 @@
 // Start Body Scripts
+// Cookie Message
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#000"
+    },
+    "button": {
+      "background": "#f1d600"
+    }
+  },
+  "theme": "classic",
+  "position": "bottom-left",
+  "content": {
+    "message": "يستخدم موقعنا ملفات تعريف الإرتباط لضمان حصولك على أفضل تجربة فى موقعنا ",
+    "dismiss": "موافق",
+    "link": "إقرأ المزيد",
+    "href": "https://arab-hasry.blogspot.com/p/privacy-policy.html"
+  }
+});
+// Cookie Message
+
+
+
+// Start NewsTicker
+var functions = {
+}
+$.fn.timeago = function (action) {
+        var fn = action ? functions[action] : functions;
+};
+
+var $j = jQuery.noConflict();
+$j("abbr.timeago")["timeago"]();
+var globals = {
+    sidebar: $("aside")["offset"](),
+    main: $("#main")["offset"]()
+};
+
+$(function() {
+    $(".widget-item-control")["remove"]();
+    $("aside a, footer a, #PageList1 li a, #LinkList100 li a, #LinkList101 li a,.blog-pager a,#HTML110 a,.ibtn,.LabLink")["removeAttr"](
+        "title");
+
+    $(".flat .archivedate")["each"](function() {
+        var _0x9652xe = $(this)["contents"]()["last"]();
+        _0x9652xe["wrap"]("<span class=\'flat-count\'/>")
+    });
+
+    $("#ContactForm1")["addClass"]("notr");
+    $(".fa-microphone")["click"](function() {
+        $(this)["toggleClass"]("cont-open");
+        $("#ContactForm1")["fadeToggle"]()
+    });
+
+    $(".label-count,.Label li span")["each"](function() {
+        $(this)["text"]($(this)["text"]()["replace"]("(", "")["replace"](")", ""))
+    });
+
+    $(".fa-arrow-up")["click"](function() {
+        $("html,body")["animate"]({
+            scrollTop: 0
+        }, 2000)
+    });
+
+    $("#HTML101 .widget-content, #HTML102 .widget-content")["each"](function() {
+        var _0x9652x11 = $(this);
+        var _0x9652x12 = _0x9652x11["text"]();
+        if (_0x9652x12["length"] > 1 && !_0x9652x12["match"]("no")) {
+            $["ajax"]({
+                url: "/feeds/posts/summary?alt=json-in-script",
+                method: "GET",
+                dataType: "jsonp",
+                success: function(_0x9652x13) {
+                    var _0x9652x14 = Math["floor"](Math["random"]() * _0x9652x13 ["feed"]["entry"]["length"]) + 1;
+                    if (_0x9652x12["match"]("recent")) {
+                        var _0x9652x15 = "/feeds/posts/summary?alt=json-in-script&max-results=10"
+                    } else {
+                        if (_0x9652x12["match"]("random")) {
+                            var _0x9652x15 = "/feeds/posts/summary?alt=json-in-script&start-index=" + _0x9652x14 + "&max-results=10"
+                        } else {
+                            var _0x9652x15 = "/feeds/posts/summary/-/" + _0x9652x12 + "?alt=json-in-script&max-results=10"
+                        }
+                    };
+
+                    $["ajax"]({
+                        url: _0x9652x15,
+                        type: "GET",
+                        dataType: "jsonp",
+                        success: function(_0x9652x13) { 
+							_0x9652x11 ["html"] ("");
+
+                            var _0x9652x16 = "";
+                            for (var _0x9652x17 = 0; _0x9652x17 < _0x9652x13[ "feed"] ["entry"][ "length" ]; _0x9652x17++) {
+                                for (var _0x9652x18 = 0;
+									_0x9652x18 < _0x9652x13 ["feed"] ["entry"] [_0x9652x17] ["link"] ["length"]; _0x9652x18++) {
+                                    	var _0x9652x19 = _0x9652x13 ["feed"] ["entry"] [_0x9652x17] ["link"] [_0x9652x18];
+                                    if (_0x9652x19 ["rel"] == "alternate") {
+                                        var _0x9652x1a = _0x9652x19 ["href"]; break
+                                    }
+                                };
+
+                                var _0x9652x1b = _0x9652x13 ["feed"] ["entry"] [_0x9652x17] ["title"] ["$t"];
+
+                                if (_0x9652x11 ["hasClass"] ("scroll")) { _0x9652x16 += "<a class=\'Scroll-Title\' href=\'" + _0x9652x1a + "\'>" + _0x9652x1b + "</a>"
+                                }
+                            };
+
+                            _0x9652x11["html"](
+                                _0x9652x16
+                            )
+
+                        },
+
+                    })
+                }
+            })
+        }
+    });
+
+    function _0x9652x14(_0x9652x35) {
+        if ($(".intro-ch")["text"]()["match"]("random")) {
+            _0x9652x35["children"]()["sort"](function() {
+                return Math["round"](Math["random"]()) - 0.5
+            })["each"](function() {
+                $(this)["appendTo"](_0x9652x35)
+            })
+        } else {
+            _0x9652x35["fadeIn"](0)
+        }
+    }
+
+    $(document)["one"]("ajaxStop", function() {
+        if (!$(".ticker-ch")["text"]()["match"]("no") && $(".ticker-ch")["text"]()["length"] > 0) {
+            var $j = jQuery.noConflict();
+            $j(".marquee")["marquee"]({
+                pauseOnHover: true,
+                duration: 15000,
+                duplicated: true,
+                direction: "right"
+            })["delay"](1000)["fadeTo"](400, 1)
+        }
+    });
+
+})
+// End NewsTicker
+
+
+
+// Start Body Scripts
 // View More Posts
 // Button Open Side Menu
 // Area Press To Hide For Side Menu And Search
@@ -466,151 +614,4 @@ var lazyadsense=!1;window.addEventListener("scroll",function(){(0!=document.docu
 // Lazy Load AdSense Loading Delay
 function downloadJSAtOnload(){var e=document.createElement("script");e.src="https://cdn.jsdelivr.net/gh/imintweb/Js/adsensegurd.js",document.body.appendChild(e)}window.addEventListener?window.addEventListener("load",downloadJSAtOnload,!1):window.attachEvent?window.attachEvent("onload",downloadJSAtOnload):window.onload=downloadJSAtOnload;
 // Lazy Loading
-
-
-
-// Cookie Message
-window.cookieconsent.initialise({
-  "palette": {
-    "popup": {
-      "background": "#000"
-    },
-    "button": {
-      "background": "#f1d600"
-    }
-  },
-  "theme": "classic",
-  "position": "bottom-left",
-  "content": {
-    "message": "يستخدم موقعنا ملفات تعريف الإرتباط لضمان حصولك على أفضل تجربة فى موقعنا ",
-    "dismiss": "موافق",
-    "link": "إقرأ المزيد",
-    "href": "https://arab-hasry.blogspot.com/p/privacy-policy.html"
-  }
-});
-// Cookie Message
-
-
-
-// Start NewsTicker
-var functions = {
-}
-$.fn.timeago = function (action) {
-        var fn = action ? functions[action] : functions;
-};
-
-var $j = jQuery.noConflict();
-$j("abbr.timeago")["timeago"]();
-var globals = {
-    sidebar: $("aside")["offset"](),
-    main: $("#main")["offset"]()
-};
-
-$(function() {
-    $(".widget-item-control")["remove"]();
-    $("aside a, footer a, #PageList1 li a, #LinkList100 li a, #LinkList101 li a,.blog-pager a,#HTML110 a,.ibtn,.LabLink")["removeAttr"](
-        "title");
-
-    $(".flat .archivedate")["each"](function() {
-        var _0x9652xe = $(this)["contents"]()["last"]();
-        _0x9652xe["wrap"]("<span class=\'flat-count\'/>")
-    });
-
-    $("#ContactForm1")["addClass"]("notr");
-    $(".fa-microphone")["click"](function() {
-        $(this)["toggleClass"]("cont-open");
-        $("#ContactForm1")["fadeToggle"]()
-    });
-
-    $(".label-count,.Label li span")["each"](function() {
-        $(this)["text"]($(this)["text"]()["replace"]("(", "")["replace"](")", ""))
-    });
-
-    $(".fa-arrow-up")["click"](function() {
-        $("html,body")["animate"]({
-            scrollTop: 0
-        }, 2000)
-    });
-
-    $("#HTML101 .widget-content, #HTML102 .widget-content")["each"](function() {
-        var _0x9652x11 = $(this);
-        var _0x9652x12 = _0x9652x11["text"]();
-        if (_0x9652x12["length"] > 1 && !_0x9652x12["match"]("no")) {
-            $["ajax"]({
-                url: "/feeds/posts/summary?alt=json-in-script",
-                method: "GET",
-                dataType: "jsonp",
-                success: function(_0x9652x13) {
-                    var _0x9652x14 = Math["floor"](Math["random"]() * _0x9652x13 ["feed"]["entry"]["length"]) + 1;
-                    if (_0x9652x12["match"]("recent")) {
-                        var _0x9652x15 = "/feeds/posts/summary?alt=json-in-script&max-results=10"
-                    } else {
-                        if (_0x9652x12["match"]("random")) {
-                            var _0x9652x15 = "/feeds/posts/summary?alt=json-in-script&start-index=" + _0x9652x14 + "&max-results=10"
-                        } else {
-                            var _0x9652x15 = "/feeds/posts/summary/-/" + _0x9652x12 + "?alt=json-in-script&max-results=10"
-                        }
-                    };
-
-                    $["ajax"]({
-                        url: _0x9652x15,
-                        type: "GET",
-                        dataType: "jsonp",
-                        success: function(_0x9652x13) { 
-							_0x9652x11 ["html"] ("");
-
-                            var _0x9652x16 = "";
-                            for (var _0x9652x17 = 0; _0x9652x17 < _0x9652x13[ "feed"] ["entry"][ "length" ]; _0x9652x17++) {
-                                for (var _0x9652x18 = 0;
-									_0x9652x18 < _0x9652x13 ["feed"] ["entry"] [_0x9652x17] ["link"] ["length"]; _0x9652x18++) {
-                                    	var _0x9652x19 = _0x9652x13 ["feed"] ["entry"] [_0x9652x17] ["link"] [_0x9652x18];
-                                    if (_0x9652x19 ["rel"] == "alternate") {
-                                        var _0x9652x1a = _0x9652x19 ["href"]; break
-                                    }
-                                };
-
-                                var _0x9652x1b = _0x9652x13 ["feed"] ["entry"] [_0x9652x17] ["title"] ["$t"];
-
-                                if (_0x9652x11 ["hasClass"] ("scroll")) { _0x9652x16 += "<a class=\'Scroll-Title\' href=\'" + _0x9652x1a + "\'>" + _0x9652x1b + "</a>"
-                                }
-                            };
-
-                            _0x9652x11["html"](
-                                _0x9652x16
-                            )
-
-                        },
-
-                    })
-                }
-            })
-        }
-    });
-
-    function _0x9652x14(_0x9652x35) {
-        if ($(".intro-ch")["text"]()["match"]("random")) {
-            _0x9652x35["children"]()["sort"](function() {
-                return Math["round"](Math["random"]()) - 0.5
-            })["each"](function() {
-                $(this)["appendTo"](_0x9652x35)
-            })
-        } else {
-            _0x9652x35["fadeIn"](0)
-        }
-    }
-
-    $(document)["one"]("ajaxStop", function() {
-        if (!$(".ticker-ch")["text"]()["match"]("no") && $(".ticker-ch")["text"]()["length"] > 0) {
-            var $j = jQuery.noConflict();
-            $j(".marquee")["marquee"]({
-                pauseOnHover: true,
-                duration: 15000,
-                duplicated: true,
-                direction: "right"
-            })["delay"](1000)["fadeTo"](400, 1)
-        }
-    });
-
-})
-// End NewsTicker
 // End Body Scripts

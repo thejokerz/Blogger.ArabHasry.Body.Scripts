@@ -2,7 +2,6 @@
 
 // Start Scripts
 // Start Cookie Message
-<script>
 /*<![CDATA[*/
 // Cookie Message
 window.cookieconsent.initialise({
@@ -25,11 +24,9 @@ window.cookieconsent.initialise({
 });
 // Cookie Message
 /*]]>*/
-</script>
 // End Cookie Message
 
 // Start NewsTicker
-<script>
 /*<![CDATA[*/
 // NewsTicker
 $(function() {
@@ -104,13 +101,11 @@ $(function() {
 })
 // NewsTicker
 /*]]>*/
-</script>
 // End NewsTicker
 
 // Start View More Posts
 // Start Button Open Side Menu
 // Start Area Press To Hide For Side Menu And Search
-<script>
 /*<![CDATA[*/
 // Start Body Scripts
 // View More Posts
@@ -172,13 +167,11 @@ $(_0x33fe('0x34'))['length'] ? ($(_0x33fe('0x18'))[_0x33fe('0x13')](), $(_0x33fe
 // Button Open Side Menu
 // Area Press To Hide For Side Menu And Search
 /*]]>*/
-</script>
 // End View More Posts
 // End Button Open Side Menu
 // End Area Press To Hide For Side Menu And Search
 
 // Start Scroll To Top
-<script>
 /*<![CDATA[*/
 // Scroll To Top
   var scrollToTop = $(".scroll-to-top");
@@ -207,11 +200,9 @@ $(_0x33fe('0x34'))['length'] ? ($(_0x33fe('0x18'))[_0x33fe('0x13')](), $(_0x33fe
   });
 // Scroll To Top
 /*]]>*/
-</script>
 // End Scroll To Top
 
 // Start Dark Mode
-<script>
 /*<![CDATA[*/
 // Dark Mode
 // check for saved 'darkMode' in localStorage
@@ -248,11 +239,9 @@ darkModeToggle.addEventListener('click', () => {
 });
 // Dark Mode
 /*]]>*/
-</script>
 // End Dark Mode
 
 // Start Sticky The Sidebar When The User Scrolling Up Or Down
-<script>
 /*<![CDATA[*/
 // Sticky The Sidebar When The User Scrolling Up Or Down
  !function(i) {
@@ -425,11 +414,9 @@ $StickySidebar(document).ready(function(){
 }); // End $StickySidebar(document).ready(function(){
 // Sticky The Sidebar When The User Scrolling Up Or Down
 /*]]>*/
-</script>
 // End Sticky The Sidebar When The User Scrolling Up Or Down
 
 // Start Hide And Show Top Main Menu When The User Scrolling Up Or Down
-<script>
 /*<![CDATA[*/
 // Hide And Show Top Main Menu When The User Scrolling Up Or Down
 (function(){
@@ -477,11 +464,9 @@ $StickySidebar(document).ready(function(){
 })();
 // Hide And Show Top Main Menu When The User Scrolling Up Or Down
 /*]]>*/
-</script>
 // End Hide And Show Top Main Menu When The User Scrolling Up Or Down
   
 // Start Add And Remove Active Class Based On URL
-<script>
 /*<![CDATA[*/
 // Add And Remove Active Class Based On URL
 jQuery(function($) {
@@ -494,11 +479,9 @@ jQuery(function($) {
 });
 // Add And Remove Active Class Based On URL
 /*]]>*/
-</script>
 // End Add And Remove Active Class Based On URL
 
 // Start Dropdown Inside Top Main Menu
-<script>
 /*<![CDATA[*/
 // Dropdown Inside Top Main Menu
 // Get all the dropdown from document
@@ -598,7 +581,6 @@ function submenuClose() {
 }
 // Dropdown Inside Top Main Menu
 /*]]>*/
-</script>
 // End Dropdown Inside Top Main Menu
 // End Scripts
 

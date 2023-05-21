@@ -1,4 +1,9 @@
 // Start Body Scripts
+
+// Start Scripts
+// Start Cookie Message
+<script>
+/*<![CDATA[*/
 // Cookie Message
 window.cookieconsent.initialise({
   "palette": {
@@ -19,49 +24,16 @@ window.cookieconsent.initialise({
   }
 });
 // Cookie Message
-
-
+/*]]>*/
+</script>
+// End Cookie Message
 
 // Start NewsTicker
-var functions = {
-}
-$.fn.timeago = function (action) {
-        var fn = action ? functions[action] : functions;
-};
-
-var $j = jQuery.noConflict();
-$j("abbr.timeago")["timeago"]();
-var globals = {
-    sidebar: $("aside")["offset"](),
-    main: $("#main")["offset"]()
-};
-
+<script>
+/*<![CDATA[*/
+// NewsTicker
 $(function() {
     $(".widget-item-control")["remove"]();
-    $("aside a, footer a, #PageList1 li a, #LinkList100 li a, #LinkList101 li a,.blog-pager a,#HTML110 a,.ibtn,.LabLink")["removeAttr"](
-        "title");
-
-    $(".flat .archivedate")["each"](function() {
-        var _0x9652xe = $(this)["contents"]()["last"]();
-        _0x9652xe["wrap"]("<span class=\'flat-count\'/>")
-    });
-
-    $("#ContactForm1")["addClass"]("notr");
-    $(".fa-microphone")["click"](function() {
-        $(this)["toggleClass"]("cont-open");
-        $("#ContactForm1")["fadeToggle"]()
-    });
-
-    $(".label-count,.Label li span")["each"](function() {
-        $(this)["text"]($(this)["text"]()["replace"]("(", "")["replace"](")", ""))
-    });
-
-    $(".fa-arrow-up")["click"](function() {
-        $("html,body")["animate"]({
-            scrollTop: 0
-        }, 2000)
-    });
-
     $("#HTML101 .widget-content, #HTML102 .widget-content")["each"](function() {
         var _0x9652x11 = $(this);
         var _0x9652x12 = _0x9652x11["text"]();
@@ -117,18 +89,6 @@ $(function() {
         }
     });
 
-    function _0x9652x14(_0x9652x35) {
-        if ($(".intro-ch")["text"]()["match"]("random")) {
-            _0x9652x35["children"]()["sort"](function() {
-                return Math["round"](Math["random"]()) - 0.5
-            })["each"](function() {
-                $(this)["appendTo"](_0x9652x35)
-            })
-        } else {
-            _0x9652x35["fadeIn"](0)
-        }
-    }
-
     $(document)["one"]("ajaxStop", function() {
         if (!$(".ticker-ch")["text"]()["match"]("no") && $(".ticker-ch")["text"]()["length"] > 0) {
             var $j = jQuery.noConflict();
@@ -142,10 +102,16 @@ $(function() {
     });
 
 })
+// NewsTicker
+/*]]>*/
+</script>
 // End NewsTicker
 
-
-
+// Start View More Posts
+// Start Button Open Side Menu
+// Start Area Press To Hide For Side Menu And Search
+<script>
+/*<![CDATA[*/
 // Start Body Scripts
 // View More Posts
 // Button Open Side Menu
@@ -205,9 +171,15 @@ $(_0x33fe('0x34'))['length'] ? ($(_0x33fe('0x18'))[_0x33fe('0x13')](), $(_0x33fe
 // View More Posts
 // Button Open Side Menu
 // Area Press To Hide For Side Menu And Search
+/*]]>*/
+</script>
+// End View More Posts
+// End Button Open Side Menu
+// End Area Press To Hide For Side Menu And Search
 
-
-
+// Start Scroll To Top
+<script>
+/*<![CDATA[*/
 // Scroll To Top
   var scrollToTop = $(".scroll-to-top");
   $(window).on("scroll", function () {
@@ -234,9 +206,13 @@ $(_0x33fe('0x34'))['length'] ? ($(_0x33fe('0x18'))[_0x33fe('0x13')](), $(_0x33fe
     $(".tutorial-demo style").detach().appendTo("head");
   });
 // Scroll To Top
+/*]]>*/
+</script>
+// End Scroll To Top
 
-
-
+// Start Dark Mode
+<script>
+/*<![CDATA[*/
 // Dark Mode
 // check for saved 'darkMode' in localStorage
 let darkMode = localStorage.getItem('darkMode'); 
@@ -271,9 +247,13 @@ darkModeToggle.addEventListener('click', () => {
   }
 });
 // Dark Mode
+/*]]>*/
+</script>
+// End Dark Mode
 
-
-
+// Start Sticky The Sidebar When The User Scrolling Up Or Down
+<script>
+/*<![CDATA[*/
 // Sticky The Sidebar When The User Scrolling Up Or Down
  !function(i) {
     i.fn.theiaStickySidebar=function(t) {
@@ -444,9 +424,13 @@ $StickySidebar(document).ready(function(){
     });
 }); // End $StickySidebar(document).ready(function(){
 // Sticky The Sidebar When The User Scrolling Up Or Down
+/*]]>*/
+</script>
+// End Sticky The Sidebar When The User Scrolling Up Or Down
 
-
-
+// Start Hide And Show Top Main Menu When The User Scrolling Up Or Down
+<script>
+/*<![CDATA[*/
 // Hide And Show Top Main Menu When The User Scrolling Up Or Down
 (function(){
     var doc = document.documentElement;
@@ -492,22 +476,30 @@ $StickySidebar(document).ready(function(){
     window.addEventListener('scroll', checkScroll);
 })();
 // Hide And Show Top Main Menu When The User Scrolling Up Or Down
-
-
-
+/*]]>*/
+</script>
+// End Hide And Show Top Main Menu When The User Scrolling Up Or Down
+  
+// Start Add And Remove Active Class Based On URL
+<script>
+/*<![CDATA[*/
 // Add And Remove Active Class Based On URL
-    jQuery(function($) {
-     var path = window.location.href;
-     $('ul li a').each(function() {
-      if (this.href === path) {
-       $(this).addClass('active');
-      }
-     });
-    });
+jQuery(function($) {
+	var path = window.location.href;
+		$('ul li a').each(function() {
+          if (this.href === path) {
+           $(this).addClass('active');
+		}
+	});
+});
 // Add And Remove Active Class Based On URL
+/*]]>*/
+</script>
+// End Add And Remove Active Class Based On URL
 
-
-
+// Start Dropdown Inside Top Main Menu
+<script>
+/*<![CDATA[*/
 // Dropdown Inside Top Main Menu
 // Get all the dropdown from document
 document.querySelectorAll('.dropdown-toggle').forEach(dropDownFunc);
@@ -605,102 +597,9 @@ function submenuClose() {
     });
 }
 // Dropdown Inside Top Main Menu
+/*]]>*/
+</script>
+// End Dropdown Inside Top Main Menu
+// End Scripts
 
-
-
-// Lazy Loading
-// Lazy Load AdSense
-var lazyadsense=!1;window.addEventListener("scroll",function(){(0!=document.documentElement.scrollTop&&!1===lazyadsense||0!=document.body.scrollTop&&!1===lazyadsense)&&(!function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(e,a)}(),lazyadsense=!0)},!0);
-// Lazy Load AdSense Loading Delay
-function downloadJSAtOnload(){var e=document.createElement("script");e.src="https://cdn.jsdelivr.net/gh/imintweb/Js/adsensegurd.js",document.body.appendChild(e)}window.addEventListener?window.addEventListener("load",downloadJSAtOnload,!1):window.attachEvent?window.attachEvent("onload",downloadJSAtOnload):window.onload=downloadJSAtOnload;
-// Lazy Loading
-
-
-
-// SliderShow
-featuredbwidget({
-    listURL: "https://arab-hasry.blogspot.com/",
-    featuredNum: 9,
-    listbyLabel: false,
-    feathumbSize: 350,
-    interval: 3000,
-    autoplay: true,
-    featuredID: "#Anutrickz-featured"
-});
-
-function featuredbwidget(a) {
-    (function(e) {
-        var h = {
-            listURL: "",
-            featuredNum: 3,
-            featuredID: "",
-            feathumbSize: 300,
-            interval: 5000,
-            autoplay: false,
-            loadingFeatured: "nextfeatured",
-            pBlank: "https://3.bp.blogspot.com/-EOu4Rrgcryo/V0m8dV7MU1I/AAAAAAAALlg/4h5vQaHpQiMdkvtUdDbu0LtjJRvgPERYwCLcB/s500/no-image.png",
-            byMonth: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-            listbyLabel: false
-        };
-        h = e.extend({}, h, a);
-        var g = e(h.featuredID);
-        var d = h.featuredNum * 200;
-        g.html('<div class="featslider"><ul class="featured-widget-list"></ul><div class="feat-buttons"><a href="#" class="feat-prev">Prev</a><a href="#" class="feat-next">Next</a></div></div>');
-        var f = function(w) {
-            var q, k, m, u, x, p, t, v, r, l = "",
-                s = w.feed.entry;
-            for (var o = 0; o < s.length; o++) {
-                for (var n = 0; n < s[o].link.length; n++) {
-                    if (s[o].link[n].rel == "alternate") {
-                        q = s[o].link[n].href;
-                        break
-                    }
-                }
-                if ("media$thumbnail" in s[o]) {
-                    u = s[o].media$thumbnail.url.replace('s72', 's300')
-                } else {
-                    u = h.pBlank.replace(/\/s[0-9]+(\-c|\/)/, "/s" + h.feathumbSize + "$1")
-                }
-                k = s[o].title.$t.substring(0, 65) + "...";
-                r = s[o].published.$t.substring(0, 10);
-                m = s[o].author[0].name.$t;
-                x = r.substring(0, 4);
-                p = r.substring(5, 7);
-                t = r.substring(8, 10);
-                v = h.byMonth[parseInt(p, 10) - 1];
-                l += '<li><a href="' + q + '"><div class="featuredbg"><img class="featuredthumb" src="' + u + '"/></div><h5>' + k + '</h5></a>' + "</li>"
-            }
-            e("ul", g).append(l).addClass(h.loadingFeatured)
-        };
-        var c = function() {
-            e(h.featuredID + " .feat-next").click()
-        };
-        var b = function() {
-            e.get((h.listURL === "" ? window.location.protocol + "//" + window.location.host : h.listURL) + "/feeds/posts/summary" + (h.listbyLabel === false ? "" : "/-/" + h.listbyLabel) + "?max-results=" + h.featuredNum + "&orderby=published&alt=json-in-script", f, "jsonp");
-            setTimeout(function() {
-                e(h.featuredID + " .feat-prev").click(function() {
-                    e(h.featuredID + " .featslider li:first").before(e(h.featuredID + " .featslider li:last"));
-                    return false
-                });
-                e(h.featuredID + " .feat-next").click(function() {
-                    e(h.featuredID + " .featslider li:last").after(e(h.featuredID + " .featslider li:first"));
-                    return false
-                });
-                if (h.autoplay) {
-                    var i = h.interval;
-                    var j = setInterval(c, i);
-                    e(h.featuredID + " .featslider li:first").before(e(h.featuredID + " .featslider li:last"));
-                    e(h.featuredID + " .featslider").hover(function() {
-                        clearInterval(j)
-                    }, function() {
-                        j = setInterval(c, i)
-                    })
-                }
-                e("ul", g).removeClass(h.loadingFeatured)
-            }, d)
-        };
-        e(document).ready(b)
-    })(jQuery)
-}
-// SliderShow
 // End Body Scripts
